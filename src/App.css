@@ -1,0 +1,150 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem; 
+  background-color: #0A0A0B;   
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* entete du blog */
+.header-blog{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo{
+  height: 25%;
+  width: 25%;
+  border-radius: 100px;
+}
+
+.blog-img{
+  height: 20px;
+}
+
+.flearnaxy-logo{
+  padding: 0.1rem;
+}
+
+.link{
+  display: flex;
+}
+
+.student, .tutor{
+  margin: 0rem 3rem;
+}
+
+p, a{
+  color: #8F8C91;
+}
+
+/* passons au contenu principal */
+.main-blog{
+  margin: 2rem;
+  background-color: #272627;
+  flex: 1;
+}
+.coll-featured{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: #272627;
+  border-radius: 8px;
+  margin: 1rem;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 2 2px 8px rgba(0, 0, 0, 1);
+  flex: 1 1 300px;
+  transition: transform 0.3s;
+}
+
+.container:hover{
+  transform: translateY(-10px);
+}
+
+@media (max-width: 600px){
+  .container{
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .header-blog, .footer-blog{
+    padding: 15px, 10px;
+    font-size: 14px;
+    flex: 1 1 100%;
+    max-width: 700px
+  }
+}
+
+.mini-profiles{
+  display: flex;
+  texy-align: left;
+  justify-content: left;
+  background-color: #272627;
+  
+}
+
+.img-mini{
+  height: 30px;
+  width: 30px;
+  border-radius: 20%;
+  background-color: #272627;
+  margin: 0.5rem;
+}
+
+h2{
+  margin: 0.2rem;
+}
+.title, .by{
+  background-color: #272627;
+}
+.by{
+  margin: 0.5rem 1rem;
+}
+/* passons au footer */
+.infos{
+  display: flex;
+  margin: 3rem 1rem;
+  width: 100%;
+}
+
+.infos1{
+  margin: 0rem 2rem;
+}
+
+.flearnaxylogo{
+  display: flex;
+  
+}
+
+.column{
+  display: flex;
+}
+
+.coll1{
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 5rem;
+  width: 100%;
+  align-items: rigth;
+  justify-content: rigth;
+}
