@@ -1,5 +1,7 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import ReadBlogPost from './components/ReadBlogPost';
 import flearnaxylogo from './assets/logo.png';
 
 const blogPosts = [
@@ -170,125 +172,23 @@ const blogPosts = [
   }
 ];
 
+import BlogHome from './components/BlogHome';
+
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-
-
-
-      {/* Featured Posts - Full Width */}
-      <section className="featured">
-        <div className="container">
-          <h2 className="section-title">Featured Posts</h2>
-          <div className="featured-grid">
-            {blogPosts.slice(0, 3).map(post => (
-              <article key={post.id} className="featured-card">
-                <div className="card-image">
-                  <img src={post.image} alt={post.title} />
-                  <span className={`audience-badge ${post.audience.toLowerCase()}`}>
-                    For {post.audience}s
-                  </span>
-                </div>
-                <div className="card-content">
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                  <div className="card-meta">
-                    <div className="author">
-                      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=face" alt={post.author} />
-                      <div>
-                        <span className="author-name">By {post.author}</span>
-                        <span className="post-date">{post.date} • {post.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* All Posts - Full Width */}
-      <section className="all-posts">
-        <div className="container">
-          <h2 className="section-title">All Posts</h2>
-          <div className="posts-grid">
-            {blogPosts.slice(3).map(post => (
-              <article key={post.id} className="post-card">
-                <div className="card-image">
-                  <img src={post.image} alt={post.title} />
-                  <span className={`audience-badge ${post.audience.toLowerCase()}`}>
-                    For {post.audience}s
-                  </span>
-                </div>
-                <div className="card-content">
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                  <div className="card-meta">
-                    <div className="author">
-                      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=face" alt={post.author} />
-                      <div>
-                        <span className="author-name">By {post.author}</span>
-                        <span className="post-date">{post.date} • {post.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer - Full Width */}
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-brand">
-            <div className="footer-logo">
-              <img src={flearnaxylogo} alt="Flearnaxy" />
-              <span className="brand-name">Flearnaxy</span>
-            </div>
-            <p className="footer-desc">Empowering learners worldwide with quality education and innovative learning experiences.</p>
-            <div className="social-links">
-              <a href="#">Twitter</a>
-              <a href="#">LinkedIn</a>
-              <a href="#">Facebook</a>
-            </div>
-          </div>
-
-          <div className="footer-links">
-            <div className="footer-column">
-              <h4>For Students</h4>
-              <a href="#">Profile</a>
-              <a href="#">My Learning</a>
-              <a href="#">Wishlist</a>
-              <a href="#">Earning F-coins</a>
-            </div>
-
-            <div className="footer-column">
-              <h4>For Instructors</h4>
-              <a href="#">Become an Instructor</a>
-              <a href="#">Teaching Resources</a>
-              <a href="#">Course Creation</a>
-              <a href="#">Earnings</a>
-            </div>
-
-            <div className="footer-column">
-              <h4>Company</h4>
-              <a href="#">About Us</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Blog</a>
-              <a href="#">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Flearnaxy. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <BlogHome />
+            </>
+          } />
+          <Route path="/readpost/:id" element={<ReadBlogPost />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

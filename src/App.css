@@ -79,13 +79,54 @@ body {
   padding: 0 2rem;
 }
 
-/* Section Titles */
-.section-title {
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: #ffffff;
+/* Enhanced Section Headers */
+.section-header {
+  width: 100%;
+  padding: 4rem 2rem 2rem;
   text-align: center;
-  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title-container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(110, 142, 251, 0.2), rgba(167, 119, 227, 0.2));
+  border: 1px solid rgba(110, 142, 251, 0.3);
+  color: #6e8efb;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff, #B8B5C0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #8F8C91;
+  font-weight: 300;
+  line-height: 1.6;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 /* Featured Section - Simple Grid */
@@ -201,6 +242,18 @@ body {
 .audience-badge.teacher {
   background: linear-gradient(135deg, rgba(249, 115, 22, 0.9), rgba(234, 88, 12, 0.9));
   box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+/* Card Links */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-2px);
 }
 
 /* Card Content */
