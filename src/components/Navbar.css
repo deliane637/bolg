@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+/* Logo Area Styles*/
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+
+}
+
+.logo-img {
+    width: 35px;
+    height: 35px;
+
+}
+
+.logo-text {
+    font-family: "Grand Hotel", cursive;
+    font-size: 30px;
+    margin: 5px;
+    font-weight: 400;
+    background: linear-gradient(135deg, #6e8efb, #a777e3, #ff6b6b);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+/* End of Logo Area section*/
+
+
+nav {
+    background: #0a0a0b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    gap: 12px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.search-bar:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-bar:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(110, 142, 251, 0.6);
+    box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.2);
+}
+
+.search-bar input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+
+}
+
+.search-bar input::placeholder {
+    color: #757575;
+}
+
+
+.info-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.balance-display {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.balance-amount {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffd700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.balance-currency {
+    font-size: 14px;
+    color: #ffb347;
+    font-weight: 500;
+    background: linear-gradient(135deg, #ffd700, #ffb347, #ff8c00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3, #ff6b6b);
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* .button:hover {
+    
+    box-shadow: 0 4px 12px rgba(110, 142, 251, 0.4);
+  } */
+
+.button:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 7px rgba(110, 142, 251, 0.3);
+}
+
+.create-text {
+    color: white;
+    font-family: "Grand Hotel", cursive;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 3px;
+}
+
+.notification-icon {
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3, #ff6b6b);
+    position: relative;
+}
+
+.notification-icon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #2D2D2E;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.notification-icon>* {
+    position: relative;
+    z-index: 2;
+}
+
+.messenger-icon {
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #00d4aa, #4ade80, #22c55e);
+    position: relative;
+}
+
+.messenger-icon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #2D2D2E;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.messenger-icon>* {
+    position: relative;
+    z-index: 2;
+}
+
+.shoping-icon {
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f59e0b, #f97316, #dc2626);
+    position: relative;
+}
+
+.shoping-icon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #2D2D2E;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.shoping-icon>* {
+    position: relative;
+    z-index: 2;
+}
+
+.user-profile {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3, #ff6b6b);
+}
+
+.user-profile img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
